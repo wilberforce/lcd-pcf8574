@@ -1,0 +1,24 @@
+{
+	"name" : "lcd-PCF8574",
+	"version" : "1.0.1",
+	"description" : "LCD i2c module using PCF8574P",
+	"main" : "index.js",
+	"scripts" : {
+		"test" : "test.js"
+	},
+	"repository" : {
+		"type" : "git",
+		"url" : "git://github.com/wilberforce/lcd-PCF8574.git"
+	},
+	"dependencies" : {
+		"i2c" : "*"
+	},
+	"keywords" : [
+		"PCF8574P",
+		"LCD HD44780",
+		"nodejs",
+		"raspberry pi"
+	],
+	"author" : "Rhys Williams",
+	"license" : "BSD"
+}
