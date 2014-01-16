@@ -1,6 +1,6 @@
 {
 	"name" : "lcd-pcf8574",
-	"version" : "1.0.1",
+	"version" : "1.0.2",
 	"description" : "LCD i2c module using PCF8574P",
 	"main" : "index.js",
 	"scripts" : {
@@ -15,7 +15,7 @@
 	},
 	"keywords" : [
 		"PCF8574P",
-		"GPIO 8 way expander"
+		"GPIO 8 way expander",
 		"LCD HD44780",
 		"nodejs",
 		"raspberry pi"
