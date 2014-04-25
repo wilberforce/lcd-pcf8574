@@ -1,25 +1,36 @@
 {
-	"name" : "lcd-pcf8574",
-	"version" : "1.0.2",
-	"description" : "LCD i2c module using PCF8574P",
-	"main" : "index.js",
-	"scripts" : {
-		"test" : "test.js"
-	},
-	"repository" : {
-		"type" : "git",
-		"url" : "git://github.com/wilberforce/lcd-pcf8574.git"
-	},
-	"dependencies" : {
-		"i2c" : "*"
-	},
-	"keywords" : [
-		"PCF8574P",
-		"GPIO 8 way expander",
-		"LCD HD44780",
-		"nodejs",
-		"raspberry pi"
-	],
-	"author" : "Rhys Williams",
-	"license" : "BSD"
+  "name": "lcd-pcf8574",
+  "version": "1.0.3",
+  "description": "LCD i2c module using PCF8574P",
+  "main": "index.js",
+  "scripts": {
+    "test": "test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wilberforce/lcd-pcf8574.git"
+  },
+  "dependencies": {
+    "i2c": "*",
+    "sleep": "~1.1.4"
+  },
+  "keywords": [
+    "PCF8574P",
+    "GPIO 8 way expander",
+    "LCD HD44780",
+    "nodejs",
+    "raspberry pi"
+  ],
+  "author": {
+    "name": "Rhys Williams"
+  },
+  "license": "BSD",
+  "readme": "LCD i2c Module\n==============\n\nLCD i2c module using PCF8574P for raspberry pi\n\nHardware: http://dx.com/p/lcd1602-adapter-board-w-iic-i2c-interface-black-works-with-official-arduino-boards-216865\n\nThis allows you to drive a 1602 LCD module using only 4 pins on the raspberry pi\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/wilberforce/lcd-pcf8574/issues"
+  },
+  "homepage": "https://github.com/wilberforce/lcd-pcf8574",
+  "_id": "lcd-pcf8574@1.0.2",
+  "_from": "lcd-pcf8574@"
 }
