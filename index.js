@@ -128,6 +128,32 @@ LCD.prototype.setCursor = function (x, y) {
 	var l = [0x00, 0x40, 0x14, 0x54];
 	return this.write(LCD.SETDDRAMADDR | (l[y] + x), displayPorts.CMD);
 }
+/** setBacklight */
+LCD.prototype.setBacklight = function (val) {
+        if (val > 0) {
+           displayPorts.backlight = 0x08;
+        } else {
+           displayPorts.backlight = 0x00;
+        }
+	return this.write(LCD.DISPLAYCONTROL, displayPorts.CMD);
+}
+/** setContarst stub */
+LCD.prototype.setContrast = function (val) {
+}
+/** Turn cursor off */
+LCD.prototype.cursor_off = function () {
+	return this.write( LCD.DISPLAYCONTROL | LCD.CURSOROFF, displayPorts.CMD);
+}
+/** Turn display off */
+LCD.prototype.off = function () {
+        displayPorts.backlight = 0x00;
+	return this.write(LCD.DISPLAYCONTROL | LCD.DISPLAYOFF, displayPorts.CMD);
+}
+/** Turn display on */
+LCD.prototype.on = function () {
+        displayPorts.backlight = 0x08;
+	return this.write(LCD.DISPLAYCONTROL | LCD.DISPLAYON, displayPorts.CMD);
+}
 /** set special character 0..7, data is an array(8) of bytes, and then return to home addr */
 LCD.prototype.createChar = function (ch, data) {
 	this.write(LCD.SETCGRAMADDR | ((ch & 7) << 3), displayPorts.CMD);
