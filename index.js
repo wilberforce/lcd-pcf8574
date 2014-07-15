@@ -128,6 +128,14 @@ LCD.prototype.setCursor = function (x, y) {
 	var l = [0x00, 0x40, 0x14, 0x54];
 	return this.write(LCD.SETDDRAMADDR | (l[y] + x), displayPorts.CMD);
 }
+/** Turn cursor off */
+LCD.prototype.cursor_off = function () {
+	return this.write( LCD.DISPLAYCONTROL | LCD.CURSOROFF, displayPorts.CMD);
+}
+/** Turn cursor on */
+LCD.prototype.cursor_on = function () {
+	return this.write( LCD.DISPLAYCONTROL | LCD.CURSORON, displayPorts.CMD);
+}
 /** setBacklight */
 LCD.prototype.setBacklight = function (val) {
         if (val > 0) {
@@ -137,12 +145,9 @@ LCD.prototype.setBacklight = function (val) {
         }
 	return this.write(LCD.DISPLAYCONTROL, displayPorts.CMD);
 }
-/** setContarst stub */
+/** setContrast stub */
 LCD.prototype.setContrast = function (val) {
-}
-/** Turn cursor off */
-LCD.prototype.cursor_off = function () {
-	return this.write( LCD.DISPLAYCONTROL | LCD.CURSOROFF, displayPorts.CMD);
+	return this.write(LCD.DISPLAYCONTROL, displayPorts.CMD);
 }
 /** Turn display off */
 LCD.prototype.off = function () {
