@@ -128,13 +128,26 @@ LCD.prototype.setCursor = function (x, y) {
 	var l = [0x00, 0x40, 0x14, 0x54];
 	return this.write(LCD.SETDDRAMADDR | (l[y] + x), displayPorts.CMD);
 }
-/** Turn cursor off */
-LCD.prototype.cursor_off = function () {
-	return this.write( LCD.DISPLAYCONTROL | LCD.CURSOROFF, displayPorts.CMD);
+/** set cursor to 0,0 */
+LCD.prototype.home = function () {
+	var l = [0x00, 0x40, 0x14, 0x54];
+	return this.write(LCD.SETDDRAMADDR | 0x00, displayPorts.CMD);
 }
-/** Turn cursor on */
+/** Turn underline cursor off */
+LCD.prototype.blink_off = function () {
+	return this.write( LCD.DISPLAYCONTROL | LCD.DISPLAYON | LCD.CURSOROFF | LCD.BLINKOFF, displayPorts.CMD);
+}
+/** Turn underline cursor on */
+LCD.prototype.blink_on = function () {
+	return this.write( LCD.DISPLAYCONTROL | LCD.DISPLAYON | LCD.CURSORON | LCD.BLINKOFF, displayPorts.CMD);
+}
+/** Turn block cursor off */
+LCD.prototype.cursor_off = function () {
+	return this.write( LCD.DISPLAYCONTROL | LCD.DISPLAYON | LCD.CURSOROFF | LCD.BLINKON, displayPorts.CMD);
+}
+/** Turn block cursor on */
 LCD.prototype.cursor_on = function () {
-	return this.write( LCD.DISPLAYCONTROL | LCD.CURSORON, displayPorts.CMD);
+	return this.write( LCD.DISPLAYCONTROL | LCD.DISPLAYON | LCD.CURSORON | LCD.BLINKON, displayPorts.CMD);
 }
 /** setBacklight */
 LCD.prototype.setBacklight = function (val) {
