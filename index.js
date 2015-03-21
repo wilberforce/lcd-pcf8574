@@ -87,10 +87,11 @@ LCD.prototype._sleep = function (milli) {
 };
 
 LCD.prototype.write4 = function (x, c) {
+	function err() {};
 	var a = (x & 0xF0); // Use upper 4 bit nibble
-	this.i2c.writeByte(a | displayPorts.backlight | c);
-	this.i2c.writeByte(a | displayPorts.E | displayPorts.backlight | c);
-	this.i2c.writeByte(a | displayPorts.backlight | c);
+	this.i2c.writeByte(a | displayPorts.backlight | c, err);
+	this.i2c.writeByte(a | displayPorts.E | displayPorts.backlight | c, err);
+	this.i2c.writeByte(a | displayPorts.backlight | c, err);
 	this._sleep(1);
 }
 
