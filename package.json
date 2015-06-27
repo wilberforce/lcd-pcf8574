@@ -1,6 +1,6 @@
 {
   "name": "lcd-pcf8574",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "description": "LCD i2c module using PCF8574P",
   "main": "index.js",
   "scripts": {
