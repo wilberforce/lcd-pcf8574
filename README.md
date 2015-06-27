@@ -9,3 +9,4 @@ This allows you to drive a 1602 LCD module using only 4 pins on the raspberry pi
 
 Version 2.0.0
 Function names now are CamelCase
+
