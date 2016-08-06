@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "i2c": "*",
-    "sleep": "~1.1.4"
+    "sleep": "*"
   },
   "keywords": [
     "PCF8574P",
