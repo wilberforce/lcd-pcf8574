@@ -1,4 +1,4 @@
-LCD i2c Module
+LCD i2c Module - no longer maintained
 ==============
 
 LCD i2c module using PCF8574P for raspberry pi
@@ -9,4 +9,7 @@ This allows you to drive a 1602 LCD module using only 4 pins on the raspberry pi
 
 Version 2.0.0
 Function names now are CamelCase
+
+Current alternative repo here:
+https://github.com/kevincastejon/js-raspberrypi-liquid-crystal
 
